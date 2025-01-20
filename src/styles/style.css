@@ -1,14 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', serif;
 }
 
 :root {
     --lineargradient: linear-gradient(-45deg, #667EEA 10%, #764BA2 93%);
+    --cor00: #252257;
+    --cor01: #3F3D56;
+    --cor02: #5E71EE;
+    --cor03: #B5AAAA;
 }
 
 body {
     height: 100vh;
     background-image: var(--lineargradient);
 }
+
+section.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    width: 916px;
+    
+}
+/*Conteudo Sign up*/
+.first-content {
+    /* display: none; */
+}
+/*Conteudo Sign in*/
+.second-content {
+    position: absolute;
+    display: none;
+}
+.first-column {
+    width: 60%;
+    background-color: #FFF;
+}
+.second-column {
+    width: 40%;
+    background-color: var(--cor00);
+}
+
+.title {
+    text-align: center;
+    font-size: 2.1em;
+}
+
+.title-primary {
+    color: var(--cor00);
+}
+
+
