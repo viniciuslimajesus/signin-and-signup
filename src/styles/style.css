@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lineargradient: linear-gradient(-45deg, #667EEA 10%, #764BA2 93%);
+}
+
+body {
+    height: 100vh;
+    background-image: var(--lineargradient);
+}
