@@ -17,8 +17,10 @@
 }
 
 body {
+    width: 100vw;
     height: 100vh;
     background-image: var(--lineargradient);
+
 }
 
 section.container {
@@ -30,13 +32,16 @@ section.container {
 }
 
 .content {
-    display: flex;
-    width: 916px;
-    
+    justify-content: space-between;
+    width: 810px;
+    height: 526px;
+    background-color: #FFF;
+    border-radius: 15px;
+    overflow: hidden;
 }
 /*Conteudo Sign up*/
 .first-content {
-    /* display: none; */
+    display: flex;
 }
 /*Conteudo Sign in*/
 .second-content {
@@ -48,9 +53,10 @@ section.container {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    background-color: #FFF;
 }
 .title {
+    padding-top: 38px;
+    padding-bottom: 14px;
     text-align: center;
     font-size: 2.1em;
 }
@@ -61,6 +67,8 @@ section.container {
 
 .list-social-media {
     display: flex;
+    padding-top: 11px;
+    padding-bottom: 12px;
     list-style: none;
     gap: 15px;
 }
@@ -75,6 +83,7 @@ section.container {
 
 div.box-or {
     position: relative;
+    padding-bottom: 14px;
 }
 
 div.box-or::after {
@@ -86,9 +95,57 @@ div.box-or::after {
     background-color: var(--cor03);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.text-input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    height: 45px;
+    border: 1px solid var(--cor03);
+    border-radius: 10px;
+}
+
+.form-label {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+}
+
+.text-input input {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .second-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 40%;
+    height: 100%;
     background-color: var(--cor00);
+}
+
+.description {
+    text-align: center;
+    font-size: .81em;
+    line-height: 1.7em;
+    color: #FFF;
+
+}
+
+img.image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 
