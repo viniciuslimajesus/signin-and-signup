@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body>
+<body class="sign-up-js">
     <section class="container">
         <!--Primeira Coluna - Create Account-->
         <div class="content first-content">
@@ -16,16 +16,22 @@
                 <!--Lista de redes sociais-->
                 <ul class="list-social-media">
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo" src="src/img/pesquisa.png" alt="Logo do Google">
+                        </li>
                     </a>
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo" src="src/img/facebook.png" alt="Logo do Facebook">
+                        </li>
                     </a>
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo" src="src/img/github.png" alt="Logo do Github">
+                        </li>
                     </a>
                 </ul>
-                <div class="box-or">
+                <div class="alternative">
                     <span>Or</span>
                 </div>
             <!--Formulário-->
@@ -53,7 +59,7 @@
                     To Keep connected with us<br>
                     please login with yout personal info
                 </p>
-                <button class="btn second-column-btn">Sign in</button>
+                <button id="signin" class="btn second-column-btn">Sign in</button>
                 <!--Imagem aqui-->
                 <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe" >
             </div>
@@ -61,48 +67,58 @@
         <!--Primeira coluna - Sign in-->
         <div class="content second-content">
             <div class="first-column">
-                <h1 class="title">Login</h1>
+                <h1 class="title title-primary">Login</h1>
                 <!--Lista de redes sociais-->
                 <ul class="list-social-media">
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo" src="src/img/pesquisa.png" alt="Logo do Google">
+                        </li>
                     </a>
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo" src="src/img/facebook.png" alt="Logo do Facebook">
+                        </li>
                     </a>
                     <a href="#">
-                        <li class="social-item"></li>
+                        <li class="social-item">
+                            <img class="images-logo "src="src/img/github.png" alt="Logo do Github">
+                        </li>
                     </a>
                 </ul>
-                <div class="box-or">
+                <div class="alternative">
                     <span>Or</span>
                 </div>
             <!--Formulário-->
-            <form action="#">
-                <div class="text-email">
-                    <label for="input-email">E-mail</label>
-                    <input type="email" name="text-email" id="input-email">
+            <form class="form">
+                <div class="text-input">
+                    <label class="form-label" for="second-input-email">E-mail</label>
+                    <input type="email" name="text-email" id="second-input-email">
                 </div>
-                <div class="text-password">
-                    <label for="input-password">Password</label>
-                    <input type="password" name="text-password" id="input-password">
+                <div class="text-input">
+                    <label class="form-label" for="second-input-password">Password</label>
+                    <input type="password" name="text-password" id="second-input-password">
                     <div class="form-icon">
                         <i class="fa-regular fa-eye"></i>
                     </div>
                 </div>
-                <input class="btn second-column-btn" type="submit" value="Sign in">
-                <a href="#">I forgot my password</a>
+                <a class="forgot-password" href="#">I forgot my password</a>
+                <input class="btn" type="submit" value="Sign in">
             </form>
             </div>
             <!--Segunda coluna-->
             <div class="second-column">
-                <h2 class="title">Hello, Friend!</h2>
+                <h2 class="title title-second">Hello, Friend!</h2>
                 <p class="description">
                     Enter your personal details<br>
                     and start journey with us
                 </p>
+                <button id="signup" class="btn second-column-btn">Sign up</button>
+                <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe" >
             </div>
         </div>
     </section>
+
+    <script src="src/js/script.js"></script>
 </body>
 </html>

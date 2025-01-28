@@ -32,23 +32,35 @@ section.container {
 }
 
 .content {
+    position: absolute;
     justify-content: space-between;
     width: 810px;
     height: 526px;
     background-color: #FFF;
     border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
     overflow: hidden;
 }
 /*Conteudo Sign up*/
 .first-content {
     display: flex;
 }
+.first-content .first-column,
+.first-content .second-column {
+    z-index: 1;
+}
 /*Conteudo Sign in*/
 .second-content {
-    position: absolute;
-    display: none;
+    display: flex;
 }
+
+.second-content .first-column,
+.second-content .second-column {
+    z-index: -1;
+}
+
 .first-column {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,6 +90,9 @@ section.container {
 }
 
 .social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 46px;
     height: 46px;
     background-color: var(--cor04);
@@ -85,18 +100,36 @@ section.container {
     box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.267);
 }
 
-div.box-or {
-    position: relative;
-    padding-bottom: 14px;
+.images-logo {
+   width: 24px; 
+   object-fit: cover;
 }
 
-div.box-or::after {
+div.alternative {
+    width: 132px;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+div.alternative span {
+    position: relative;
+    font-size: .9em;
+    font-weight: bold;
+    color: var(--cor00);
+}
+
+div.alternative span::after, span::before {
     position: absolute;
-    left: 0;
     content: '';
-    width: 2rem;
+    right: 30px;
+    bottom: 50%;
+    width: 37px;
     height: 1px;
     background-color: var(--cor03);
+}
+
+div.alternative span::before {
+    left: 30px;
 }
 
 .form {
@@ -117,10 +150,11 @@ div.box-or::after {
 
 .form-label {
     position: absolute;
-    top: -12px;
-    left: 12px;
+    top: -11px;
+    left: 11px;
     padding: 0 6px;
     background-color: #FFF;
+    font-size: .9em;
     color: var(--cor03);
 }
 
@@ -139,6 +173,11 @@ div.box-or::after {
     padding: 12px;
     color: var(--cor03);
     cursor: pointer;
+    transition: ease-in .3s;
+}
+
+.form-icon:hover {
+    color: #000;
 }
 
 .btn {
@@ -154,8 +193,9 @@ div.box-or::after {
 }
 
 input[type="submit"] {
+    margin-top: 20px;
     background-color: #5E71EE;
-    transition: all ease .3s;
+    transition: ease-in .3s;
     
 }
 
@@ -163,19 +203,15 @@ input[type="submit"]:hover {
     background-color: #5465D4;
 } 
 
-.second-column-btn {
-    background-color: transparent;
-    border: 2px solid #FFF;
-}
-
 .second-column {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
     height: 100%;
     background-color: var(--cor00);
+    left: 60%;
 }
 
 .description {
@@ -193,4 +229,82 @@ img.image {
     width: 100%;
 }
 
+.second-column-btn {
+    margin-top: 36px;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    transition: ease-in .3s;
+}
+
+.second-column-btn:hover {
+    background-color: #FFF;
+    color: var(--cor00);
+}
+
+.forgot-password {
+    align-self: flex-end;
+    text-decoration: none;
+    font-size: .9em;
+    color: var(--cor00);
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/*Classe inserida via JS*/
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column {
+    z-index: 1;
+}
+
+.sign-in-js .first-column {
+    left: 40%;
+    
+}
+.sign-in-js .second-column {
+    left: 0;
+}
+
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column {
+    z-index: 1;
+}
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-column {
+    left: 0;
+}
+.sign-up-js .second-column {
+    left: 60%;
+}
+
+/*Animação CSS*/
+
+@keyframes slidein {
+    from {
+        left: 60%;
+    }
+
+    50% {
+        left: 40%;
+    }
+
+    75% {
+        left: 20%;
+    }
+
+    to {
+        left: 0;
+    }
+}
 
