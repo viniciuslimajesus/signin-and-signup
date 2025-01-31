@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/styles/mobile.css" media="screen and (max-width: 900px)">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body class="sign-up-js">
+<body>
     <section class="container">
         <!--Primeira Coluna - Create Account-->
         <div class="content first-content">
@@ -55,19 +55,22 @@
                     <input type="password" name="text-password" id="input-password-confirm">
                     <div class="form-icon"><i class="fa-regular fa-eye"></i></div>
                 </div>
-                <input class="btn" type="submit" value="Sign up">
+                <input class="btn btn-primary" type="submit" value="Sign up">
             </form>
             </div>
             <!--Segunda coluna-->
             <div class="second-column">
-                <h2 class="title title-second">Welcome Back!</h2>
-                <p class="description">
-                    To Keep connected with us<br>
-                    please login with yout personal info
-                </p>
-                <button id="signin" class="btn second-column-btn">Sign in</button>
-                <!--Imagem aqui-->
-                <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe" >
+                <div class="content-box">
+                    <h2 class="title title-second">Welcome Back!</h2>
+                    <p class="description">
+                        To Keep connected with us<br>
+                        please login with yout personal info
+                    </p>
+                    <button id="signin" class="btn btn-second">Sign in</button>
+                </div>
+                <div class="box-img">
+                    <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe">
+                </div>
             </div>
         </div>
         <!--Primeira coluna - Sign in-->
@@ -109,18 +112,22 @@
                     </div>
                 </div>
                 <a class="forgot-password" href="#">I forgot my password</a>
-                <input class="btn" type="submit" value="Sign in">
+                <input class="btn btn-primary" type="submit" value="Sign in">
             </form>
             </div>
             <!--Segunda coluna-->
             <div class="second-column">
-                <h2 class="title title-second">Hello, Friend!</h2>
-                <p class="description">
-                    Enter your personal details<br>
-                    and start journey with us
-                </p>
-                <button id="signup" class="btn second-column-btn">Sign up</button>
-                <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe" >
+                <div class="content-box">
+                    <h2 class="title title-second">Hello, Friend!</h2>
+                    <p class="description">
+                        Enter your personal details<br>
+                        and start journey with us
+                    </p>
+                    <button id="signup" class="btn btn-second">Sign up</button>
+                </div>
+                <div class="box-img">
+                    <img class="image" src="src/img/my-universe.svg" alt="Imagem My universe">
+                </div>
             </div>
         </div>
     </section>

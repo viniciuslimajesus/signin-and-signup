@@ -34,7 +34,7 @@ section.container {
     justify-content: space-between;
     align-items: center;
     width: 810px;
-    height: 490px;
+    height: 496px;
     background-color: #FFF;
     border-radius: 15px;
     overflow: hidden;
@@ -46,17 +46,20 @@ section.container {
 
 .second-content {
     position: absolute;
-    display: none;
+    z-index: -1;
+    display: flex;
 }
 
 /*Coluna do Formulário*/
 
 .first-column {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60%;
     height: 100%;
+    transition: all .3s;
 }
 
 .title {
@@ -127,7 +130,7 @@ div.alternative {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 }
 
 .input-box {
@@ -160,19 +163,124 @@ div.alternative {
 .form-icon {
     padding: 10px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
-img.image {
-    display: none;
+.forgot-password {
+    align-self: flex-end;
+    text-decoration: none;
+    color: var(--cor00);
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 213px;
+    height: 45px;
+    align-self: center;
+    border-radius: 100px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--cor02);
+    border: none;
+    font-size: 1.6em;
+    transition: ease-in .3s;
+}
+
+.btn-primary:hover {
+    background-color: #5061cf;
+}
+
+.btn-second {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    font-size: 1.2em;
+    transition: ease-in .3s;
+}
+
+.btn-second:hover {
+    background-color: #FFF;
+    color: var(--cor00);
 }
 
 /*Coluna da imagem*/
 
 .second-column {
+    position: absolute;
+    left: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40%;
     height: 100%;
     background-color: var(--cor00);
+    transition: all .3s;
 }
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+.description {
+    margin-top: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.box-img {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+img.image {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+}
+
+.sign-in-js .first-content {
+    z-index: -1;
+}
+.sign-in-js .second-content {
+    z-index: 1;
+}
+
+.sign-up-js .first-content {
+    z-index: 1;
+}
+.sign-up-js .second-content {
+    z-index: -1;
+}
+
+/*Transição*/
+.sign-up-js .first-content .first-column {
+    left: 0;
+}
+.sign-up-js .first-content .second-column {
+    left: 60%;
+}
+
+.sign-in-js .second-content .first-column {
+    left: 40%;
+}
+.sign-in-js .second-content .second-column {
+    left: 0;
+}
+
+
+
+
